@@ -29,7 +29,7 @@ public class Account {
     @GeneratedValue(strategy = IDENTITY)
     private Long id;
 
-    @OneToOne
+    @OneToOne(optional = false)
     @JoinColumn(name = "USER_ID", nullable = false, unique = true)
     @NotNull(message = "account must have user")
     private User user;
